@@ -1,0 +1,10 @@
+/******************************************
+    File Name: alignement.css
+/****************************************** */
+
+#serch-bar{
+    float: right;
+}
+input{
+    text-align: center;
+}
