@@ -2,9 +2,18 @@
     File Name: alignement.css
 /****************************************** */
 
-.header .serch-bar{
+div{
     float: right;
+    
 }
+
+button{
+    float: left;
+    text-align: center;
+    background-position: center;
+}
+
+
 input{
     text-align: center;
 }
