@@ -1,5 +1,9 @@
-var $all = null;
+const loadData = heroes => {
+    console.log(heroes)
+  }
 
-function recherche() {
-    
-}
+fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
+  .then((response) => response.json())
+  .then(loadData)
+
+console.log();
