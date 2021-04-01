@@ -33,18 +33,28 @@
                 </tr>
             </tbody>
         </table>
-        <script>
-            import {getName} from './get-them-all.js'
-            
-            const loadData = heroes => {
-                console.log(heroes)
-            }
-
-            fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
-                .then((response) => response.json())
-                .then(loadData)
-            console.log(loadData);
-
-        </script>     
+        <div id="heroes">
+            <table id="tableau">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Full Name</th>
+                        <th colspan="6">Power stats</th>
+                    </tr>
+                </thead>
+                <tbody id="elements">
+                    <tr>
+                        <td colspan="3"></td>
+                        <td>Intelligence</td>
+                        <td>Strength</td>
+                        <td>Speed</td>
+                        <td>Durability</td>
+                        <td>Power</td>
+                        <td>Combat</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>     
     </body>
 </html>
