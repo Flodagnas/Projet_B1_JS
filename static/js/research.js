@@ -19,10 +19,12 @@ const loadData = heroes => {
 
         // Contenus
         tdId.appendChild(document.createTextNode(heroes[i].id))
-        tdPhoto.appendChild(document.createTextNode(heroes[i].images.xs))
+        let oImg = document.createElement("img")
+        oImg.setAttribute('src', heroes[i].images.xs);
+        tdPhoto.appendChild(oImg)
         tdName.appendChild(document.createTextNode(heroes[i].name))
         tdFullName.appendChild(document.createTextNode(heroes[i].biography.fullName))
-        tr.appendChild(tdId); tr.appendChild(tdName); tr.appendChild(tdFullName)
+        tr.appendChild(tdId); tr.appendChild(tdPhoto); tr.appendChild(tdName); tr.appendChild(tdFullName)
 
         let powerStats = heroes[i]['powerstats']
         for (let i in powerStats) {
