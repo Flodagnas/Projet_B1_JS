@@ -6,9 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/home.css">
     <script src="../scripts/super-hero.js" defer></script>
+    <script src="../scripts/search.js" defer></script>
     <title>Home</title>
 </head>
 <body>
-    <h1>Première page !</h1>
+    <div class="title">
+        <h1>Heroes</h1>
+    </div>
+    <div class="search">
+        <label for="searchInput">Search</label>
+        <input type="text" name="searchInput" id="searchInput">
+    </div>
+    <div id="heroes">
+        <table id="tableau">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Full Name</th>
+                    <th colspan="6">Power stats</th>
+                </tr>
+            </thead>
+            <tbody id="elements">
+                <tr>
+                    <td colspan="3"></td>
+                    <td>Intelligence</td>
+                    <td>Strength</td>
+                    <td>Speed</td>
+                    <td>Durability</td>
+                    <td>Power</td>
+                    <td>Combat</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
