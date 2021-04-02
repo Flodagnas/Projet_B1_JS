@@ -28,7 +28,12 @@ const loadData = heroes => {
         tdPhoto.appendChild(oImg)
         tdName.appendChild(document.createTextNode(heroes[i].name))
         tdFullName.appendChild(document.createTextNode(heroes[i].biography.fullName))
-        //continuer ici
+        tdRace.appendChild(document.createTextNode(heroes[i].appearance.race))
+        tdGender.appendChild(document.createTextNode(heroes[i].appearance.gender))
+        tdHeight.appendChild(document.createTextNode(heroes[i].appearance.height))
+        tdWeight.appendChild(document.createTextNode(heroes[i].appearance.weight))
+        tdPlaceOfBirth.appendChild(document.createTextNode(heroes[i].biography.placeOfBirth))
+        tdAlignement.appendChild(document.createTextNode(heroes[i].biography.alignment))
         tr.appendChild(tdPhoto); tr.appendChild(tdName); tr.appendChild(tdFullName)
 
         let powerStats = heroes[i]['powerstats']
@@ -37,6 +42,7 @@ const loadData = heroes => {
             td.appendChild(document.createTextNode(powerStats[i]))
             tr.appendChild(td)
         }
+        tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight); tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
 
         tab.appendChild(tr)
     }
