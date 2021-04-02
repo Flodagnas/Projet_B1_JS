@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <div class="serch-bar">
+            <div class="search-bar">
                 <input type="text" style="width:125px; height: 30px;" class="form-control input-lg" placeholder="Search Heroes" />
             </div>
         </header>
@@ -26,7 +26,7 @@
                         <th>Photo</th>
                         <th>Name</th>
                         <th>Full Name</th>
-                        <th colspan="6">Power stats</th>
+                        <th colspan="6">Powerstats</th>
                         <th>Race</th>
                         <th>Gender</th>
                         <th>Height</th>
@@ -47,6 +47,10 @@
                     </tr>
                 </tbody>
             </table>
-        </div>    
+        </div>
+        <br>
+        <div id="listingTable"></div>
+        <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+        <a href="javascript:nextPage()" id="btn_next">Next</a>  
     </body>
 </html>
