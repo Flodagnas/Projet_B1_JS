@@ -2,7 +2,6 @@ console.log("Script super-hero loaded")
 
 const display = () => {
     let div = document.createElement('div')
-    
 }
 
 const loadData = heroes => {
@@ -124,3 +123,10 @@ function numPages()
 window.onload = function() {
     changePage(1);
 };
+
+function séparation() {
+    for (let i = 0; i < numPages; i++) {
+        let sep = loadData/numPages;
+        console.log(sep);
+    }
+}
