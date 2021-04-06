@@ -6,7 +6,7 @@ const display = () => {
 
 const loadData = heroes => {
     let tab = document.getElementById('elements')
-
+    
     for (let i in heroes) {
         let tr = document.createElement('tr')
 
@@ -53,80 +53,20 @@ fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
     .then(loadData) // .then will call the function with the JSON value
 
 
-var current_page = 1;
-var records_per_page = 1;
-
-var objJson = [
-    { adName: "Page 1"},
-    { adName: "Page 2"},
-    { adName: "Page 3"},
-    { adName: "Page 4"},
-    { adName: "Page 5"},
-    { adName: "Page 6"},
-    { adName: "Page 7"},
-    { adName: "Page 8"},
-    { adName: "Page 9"},
-    { adName: "Page 10"}
-]; // Can be obtained from another source, such as your objJson variable
-
-function prevPage()
-{
-    if (current_page > 1) {
-        current_page--;
-        changePage(current_page);
-    }
-}
-
-function nextPage()
-{
-    if (current_page < numPages()) {
-        current_page++;
-        changePage(current_page);
-    }
-}
-
-function changePage(page){
-    var btn_next = document.getElementById("btn_next");
-    var btn_prev = document.getElementById("btn_prev");
-    var listing_table = document.getElementById("listingTable");
-    var page_span = document.getElementById("page");
-
-    // Validate page
-    if (page < 1) page = 1;
-    if (page > numPages()) page = numPages();
-
-    listing_table.innerHTML = "";
-
-    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
-        listing_table.innerHTML += objJson[i].adName + "<br>";
-    }
-    page_span.innerHTML = page;
-
-    if (page == 1) {
-        btn_prev.style.visibility = "hidden";
-    } else {
-        btn_prev.style.visibility = "visible";
-    }
-
-    if (page == numPages()) {
-        btn_next.style.visibility = "hidden";
-    } else {
-        btn_next.style.visibility = "visible";
-    }
-}
-
-function numPages()
-{
-    return Math.ceil(objJson.length / records_per_page);
-}
-
-window.onload = function() {
-    changePage(1);
-};
-
 function séparation() {
-    for (let i = 0; i < numPages; i++) {
-        let sep = loadData/numPages;
-        console.log(sep);
+    if (nb-elem == 10) {
+        tab.appendChild.slice(0, 9)
+    }
+    if (nb-elem == 20) {
+        tab.appendChild.slice(0, 19)
+    }
+    if (nb-elem == 50) {
+        tab.appendChild.slice(0, 49)
+    }
+    if (nb-elem == 100) {
+        tab.appendChild.slice(0, 99)
+    }
+    else{
+        tab.appendChild(tr)
     }
 }
