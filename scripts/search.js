@@ -1,5 +1,7 @@
 console.log("Script search loaded")
 
+callJson()
+
 let search = ""
 
 document.getElementById('searchInput').addEventListener('keyup', () => {
@@ -8,7 +10,6 @@ document.getElementById('searchInput').addEventListener('keyup', () => {
 })
 
 function loadTab(heroes) {
-    console.log(search)
     let lines = document.getElementsByClassName('line')
     for (let line of Array.from(lines)) {
         line.remove()
@@ -18,16 +19,13 @@ function loadTab(heroes) {
         let hero = heroes[i]
         if (search != "") {
             if (hero.biography.fullName.includes(search)) {
-                makeTab(hero)
+                makeLine(hero)
             }
         } else {
-            makeTab(hero)
+            makeLine(hero)
         }
     }
 }
-
-callJson()
-
 
 
 function callJson() {
@@ -36,7 +34,7 @@ function callJson() {
     .then(loadTab) // .then will call the function with the JSON value
 }
 
-function makeTab(hero) {
+function makeLine(hero) {
     let tab = document.getElementById('elements')
     let tr = document.createElement('tr')
     tr.classList.add('line')
