@@ -4,6 +4,7 @@ const display = () => {
     let div = document.createElement('div')
 }
 let test = []
+let page = 0
 console.log(test);
 const loadData = heroes => {
     let tab = document.getElementById('elements')
@@ -61,19 +62,39 @@ Array.from(document.getElementsByTagName('tr')).forEach(tr => {
 
 
 function séparation() {
-    if (nb-elem == 10) {
-        test.slice(0, 9)
+    let select = document.getElementById('nb-elem').value
+    let tab = document.getElementById('elements')
+    let lines = document.getElementsByTagName('tr')
+    Array.from(lines).forEach(lines => {
+        lines.remove()
+    });
+    if (select === "") {
+        for (let i = 0; i < test.length; i++) {
+            tab.appendChild(test[i])
+        }
     }
-    if (nb-elem == 20) {
-        test.slice(0, 19)
-    }
-    if (nb-elem == 50) {
-        test.slice(0, 49)
-    }
-    if (nb-elem == 100) {
-        test.slice(0, 99)
-    }
-    else{
-        tab.appendChild(tr)
+    else {
+        let tri = test.slice(page * select, page * select + select - 1)
+        
     }
 }
+
+document.getElementsByName('previous')[0].addEventListener('click', () => {
+    page -= 1
+    console.log(page);
+})
+
+document.getElementsByName('previous')[1].addEventListener('click', () => {
+    page -= 1
+    console.log(page);
+})
+
+document.getElementsByName('next')[0].addEventListener('click', () => {
+    page += 1
+    console.log(page);
+})
+
+document.getElementsByName('next')[1].addEventListener('click', () => {
+    page += 1
+    console.log(page);
+})
