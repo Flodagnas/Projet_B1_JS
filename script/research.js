@@ -48,7 +48,6 @@ const loadData = heroes => {
         tab.appendChild(tr)
         
     }
-    console.log(test)
 }
 
 fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
@@ -75,7 +74,9 @@ function séparation() {
     }
     else {
         let tri = test.slice(page * select, page * select + select - 1)
-        
+        Array.from(tri).forEach(tri => {
+            tri.push()
+        });
     }
 }
 
