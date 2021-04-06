@@ -5,6 +5,8 @@ const display = () => {
 }
 let test = []
 let page = 0
+let select = document.getElementById('nb-elem').value
+
 console.log(test);
 const loadData = heroes => {
     let tab = document.getElementById('elements')
@@ -61,7 +63,7 @@ Array.from(document.getElementsByTagName('tr')).forEach(tr => {
 
 
 function séparation() {
-    let select = document.getElementById('nb-elem').value
+    
     let tab = document.getElementById('elements')
     let lines = document.getElementsByTagName('tr')
     Array.from(lines).forEach(lines => {
@@ -73,11 +75,15 @@ function séparation() {
         }
     }
     else {
-        let tri = test.slice(page * select, page * select + select - 1)
-        Array.from(tri).forEach(tri => {
-            tri.push()
-        });
+        let start = page * select
+        let end = start + select - 1
+        let tri = test.slice(start, end)
+        for (let i of tri) {
+            tab.appendChild(test[i])
+        }        
     }
+    console.log(start);
+    console.log(end);
 }
 
 document.getElementsByName('previous')[0].addEventListener('click', () => {
@@ -99,3 +105,10 @@ document.getElementsByName('next')[1].addEventListener('click', () => {
     page += 1
     console.log(page);
 })
+
+document.getElementById('nb-elem').addEventListener('change', () => {
+    select = document.getElementById('nb-elem').value
+    console.log(select);
+    
+})
+
