@@ -1,13 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/home.css">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Première page !</h1>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="..\scripts\sort.js" defer></script>
+        <title>Répertoire à Héros</title>
+        <link rel="stylesheet" href="..\static\css\home.css">
+    </head>
+    <body>
+        <header>
+            <div class="search-bar">
+                <input type="text" style="width:125px; height: 30px;" class="form-control input-lg" placeholder="Search Heroes" />
+            </div>
+        </header>
+        <br>
+        <br>
+        <div class="title">
+            <h1>Heroes</h1>
+        </div>
+        <div class="search">
+            <label for="searchInput">Search</label>
+            <input type="text" name="searchInput" id="searchInput">
+            <select name="searchSelect" id="searchSelect">
+                <option value="name">Name</option>
+                <option value="biography.fullName">Full name</option>
+            </select>
+        </div>
+        <select name="nombre" id="nb-elem">
+            <option value="20">--Please choose an option--</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="">all results</option>
+        </select>
+        <button class="bouton" name="previous">Previous Page</button>
+        <button class="bouton" name="next">Next Page</button>
+        <div id="heroes">
+            <table id="tableau">
+                <thead>
+                    <tr>
+                        <th id="photo">Photo</th>
+                        <th id="name">Name</th>
+                        <th id="fullName">Full Name</th>
+                        <th colspan="6">Powerstats</th>
+                        <!--<th>Race</th>
+                        <th>Gender</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Place Of Birth</th>
+                        <th>Alignement</th>-->
+                    </tr>
+                </thead>
+                <tbody id="elements">
+                    <tr>
+                        <td colspan="3"></td>
+                        <td>Intelligence</td>
+                        <td>Strength</td>
+                        <td>Speed</td>
+                        <td>Durability</td>
+                        <td>Power</td>
+                        <td>Combat</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <button class="bouton" name="previous">Previous Page</button>
+        <button class="bouton" name="next">Next Page</button>
+    </body>
 </html>
