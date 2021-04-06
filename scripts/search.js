@@ -3,6 +3,7 @@ console.log("Script search loaded")
 callJson()
 
 let search = ""
+let searchSelect = document.getElementById('searchSelect').value
 
 document.getElementById('searchInput').addEventListener('keyup', () => {
     search = document.getElementById('searchInput').value
@@ -18,7 +19,7 @@ function loadTab(heroes) {
     for (let i in heroes) {
         let hero = heroes[i]
         if (search != "") {
-            if (hero.biography.fullName.includes(search)) {
+            if (eval('hero.' + searchSelect + '.includes(search)')) {
                 makeLine(hero)
             }
         } else {
@@ -59,3 +60,8 @@ function makeLine(hero) {
 
     tab.appendChild(tr)
 }
+
+document.getElementById('searchSelect').addEventListener('change', () => {
+    searchSelect = document.getElementById('searchSelect').value
+    callJson()
+})
