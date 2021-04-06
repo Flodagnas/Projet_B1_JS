@@ -3,7 +3,8 @@ console.log("Script super-hero loaded")
 const display = () => {
     let div = document.createElement('div')
 }
-
+let test = []
+console.log(test);
 const loadData = heroes => {
     let tab = document.getElementById('elements')
     
@@ -44,27 +45,33 @@ const loadData = heroes => {
         tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight); tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
 
         tab.appendChild(tr)
+        
     }
-
+    console.log(test)
 }
 
 fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
     .then((response) => response.json()) // parse the response from JSON
     .then(loadData) // .then will call the function with the JSON value
 
+    
+Array.from(document.getElementsByTagName('tr')).forEach(tr => {
+    test.push(tr)
+});
+
 
 function séparation() {
     if (nb-elem == 10) {
-        tab.appendChild.slice(0, 9)
+        test.slice(0, 9)
     }
     if (nb-elem == 20) {
-        tab.appendChild.slice(0, 19)
+        test.slice(0, 19)
     }
     if (nb-elem == 50) {
-        tab.appendChild.slice(0, 49)
+        test.slice(0, 49)
     }
     if (nb-elem == 100) {
-        tab.appendChild.slice(0, 99)
+        test.slice(0, 99)
     }
     else{
         tab.appendChild(tr)
