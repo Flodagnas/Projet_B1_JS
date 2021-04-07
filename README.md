@@ -40,20 +40,20 @@ Dossier templates --> home.html
 ```
 Nathan SCHNEIDER
 - Search
--	Sort
--	Assemblage du code
+- Sort
+- Assemblage du code
 ```
 ```
 Florian DAGNAS
--	Display
--	Fetching DATA
--	Assemblage du code
+- Display
+- Fetching DATA
+- Assemblage du code
 ```
 ```
 Malo LOYER VIAUD
--	Sort
--	Readme
--	Power Point
+- Sort
+- Readme
+- Power Point
 ```
 
 
