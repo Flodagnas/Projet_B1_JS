@@ -1,4 +1,4 @@
-<img src="https://www.dhresource.com/0x0/f2/albu/g5/M01/3F/B4/rBVaJFkgPkKAAXYHAALdbgBoZTk620.jpg" width="1050" height="250" name="Java Script">
+<img src="https://ae01.alicdn.com/kf/He2ac02cc138b4c8a9499da1aa5a38b40v/7x5FT-Super-h-ros-groupe-Avengers-famille-personnalis-Photo-Studio-toile-de-fond-banni-re-vinyle.jpg_Q90.jpg_.webp" width="1050" height="250" name="Java Script">
 
 
 # Projet_B1_JS : Super-Héros
@@ -17,11 +17,11 @@ La recherche devrait être interactive, en d’autres termes, les résultats dev
 Les language utiliser son :
 
 
-<div style="display:flex; justify-content:space-between; background-color:#fff">
+<span>
   <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" width="100" height="100" name="Java Script">
   <img src="https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_html5-512.png" width="100" height="100" name="HTML5">
   <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" width="100" height="100" name="CSS3">
-</div>
+</span>
 
 
 - ## **Comment l’utiliser :**
