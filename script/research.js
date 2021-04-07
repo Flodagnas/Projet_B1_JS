@@ -1,14 +1,11 @@
 console.log("Script super-hero loaded")
 
-const display = () => {
-    let div = document.createElement('div')
-}
-let test = []
-let page = 0
+let linesInTab = []
+let pageNumero = 0
 let select = document.getElementById('nb-elem').value
 
 const loadData = heroes => {
-    let tab = document.getElementById('elements')
+    let tbody = document.getElementById('elements')
     
     for (let i in heroes) {
         let tr = document.createElement('tr')
@@ -47,73 +44,62 @@ const loadData = heroes => {
         }
         tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight); tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
 
-        tab.appendChild(tr)
-        
+        tbody.appendChild(tr)
     }
 }
 
 fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
     .then((response) => response.json()) // parse the response from JSON
     .then(loadData) // .then will call the function with the JSON value
+    .then(() => {
+        document.querySelectorAll('.line').forEach(tr => {
+            linesInTab.push(tr)
+        })
+    })
+    .then(pagination)
 
 
-Array.from(document.getElementsByClassName('line')).forEach(tr => {
-    console.log(tr)
-    test.push(tr)
-});
-
-
-function separation() {
+function pagination() {
     
-    let tab = document.getElementById('elements')
-    let lines = document.getElementsByTagName('tr')
-    Array.from(lines).forEach(lines => {
-        lines.remove()
-    });
+    let tbody = document.getElementById('elements')
+    let lines = document.querySelectorAll('.line')
+    lines.forEach(line => {
+        line.remove()
+    })
     if (select === "") {
-        for (let i = 0; i < test.length; i++) {
-            tab.appendChild(test[i])
+        for (let i = 0; i < linesInTab.length; i++) {
+            tbody.appendChild(linesInTab[i])
         }
-    }
-    else {
-        let start = page * select
-        let end = start + select - 1
-        let tri = test.slice(start, end)
-        console.log(test);
-        for (let i of tri) {
-            tab.appendChild(i)
-        }
-        console.log(start);
-        console.log(end);      
+    } else {
+        let start = parseInt(pageNumero) * parseInt(select)
+        let end = parseInt(start) + parseInt(select) - 1
+        let tri = linesInTab.slice(start, end)
+        for (let line of tri) {
+            tbody.appendChild(line)
+        }  
     }
 }
 
 document.getElementsByName('previous')[0].addEventListener('click', () => {
-    page -= 1
-    console.log(page);
+    pageNumero -= 1
+    pagination()
 })
-
 document.getElementsByName('previous')[1].addEventListener('click', () => {
-    page -= 1
-    console.log(page);
+    pageNumero -= 1
+    pagination()
 })
-
 document.getElementsByName('next')[0].addEventListener('click', () => {
-    page += 1
-    console.log(page);
+    pageNumero += 1
+    pagination()
 })
-
 document.getElementsByName('next')[1].addEventListener('click', () => {
-    page += 1
-    console.log(page);
+    pageNumero += 1
+    pagination()
 })
 
 document.getElementById('nb-elem').addEventListener('change', () => {
     select = document.getElementById('nb-elem').value
-    console.log(select);
-    separation()
-    
+    console.log(select)
+    pagination()
 })
 
-// console.log(document.getElementsByClassName('line'))
-// console.log(Array.from(document.getElementsByClassName('line')))
