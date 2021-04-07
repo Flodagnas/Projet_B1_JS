@@ -15,7 +15,7 @@ Il doit être possible de filtrer l’information en recherchant le nom comme un
 La recherche devrait être interactive, en d’autres termes, les résultats devraient être affichés que vous écrivez.
 Les language utiliser son :
 
-<span>
+<span style="display:flex; justify-content:space-between">
   <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" width="100" height="100" name="Java Script">
   <img src="https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_html5-512.png" width="100" height="100" name="HTML5">
   <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" width="100" height="100" name="CSS3">
