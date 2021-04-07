@@ -14,6 +14,14 @@
     <div class="title">
         <h1>Heroes</h1>
     </div>
+    <select name="nombre" id="nb-elem">
+        <option value="20">--Please choose an option--</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="">all results</option>
+    </select>
     <div class="search">
         <label for="searchInput">Search</label>
         <input type="text" name="searchInput" id="searchInput">
@@ -22,6 +30,8 @@
             <option value="biography.fullName">Full name</option>
         </select>
     </div>
+    <button class="bouton" name="previous">Previous Page</button>
+    <button class="bouton" name="next">Next Page</button>
     <div id="heroes">
         <table id="tableau">
             <thead>
@@ -51,6 +61,8 @@
                 </tr>
             </tbody>
         </table>
+        <button class="bouton" name="previous">Previous Page</button>
+        <button class="bouton" name="next">Next Page</button>
     </div>
 
 </body>

@@ -38,9 +38,11 @@ function callJson() {
     .then((response) => response.json()) // parse the response from JSON
     .then(loadTab) // .then will call the function with the JSON value
     .then(() => {
+        linesInTab = []
         document.querySelectorAll('.line').forEach(tr => {
             linesInTab.push(tr)
         })
+        console.log(linesInTab)
     })
     .then(pagination)
 }
@@ -110,7 +112,7 @@ function sort(category, nbr) {
     
     document.getElementById(category).classList.toggle('notReverse')
     if (document.getElementById(category).className == 'notReverse'){
-        tabLines.sort(function(a,b){
+        linesInTab.sort(function(a,b){
             if (!numberValue.includes(category)) {
                 return a.getElementsByTagName('td')[nbr].innerHTML.localeCompare(b.getElementsByTagName('td')[nbr].innerHTML)
             } else {
@@ -118,7 +120,7 @@ function sort(category, nbr) {
             }
         })
     } else {
-        tabLines.sort(function(a,b){
+        linesInTab.sort(function(a,b){
             if (!numberValue.includes(category)) {
                 return b.getElementsByTagName('td')[nbr].innerHTML.localeCompare(a.getElementsByTagName('td')[nbr].innerHTML)
             } else {
@@ -127,10 +129,9 @@ function sort(category, nbr) {
         })
     }
 
+    pageNumero = 0
 
-    for (let line of tabLines){
-        document.getElementById('elements').appendChild(line)
-    }
+    pagination()
 }
 
 function deleteLines() {
