@@ -42,7 +42,6 @@ function callJson() {
         document.querySelectorAll('.line').forEach(tr => {
             linesInTab.push(tr)
         })
-        console.log(linesInTab)
     })
     .then(pagination)
 }
