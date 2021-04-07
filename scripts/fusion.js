@@ -5,16 +5,16 @@ callJson()
 let search = ""
 let searchSelect = document.getElementById('searchSelect').value
 
+let tabLines = []
+
 document.getElementById('searchInput').addEventListener('keyup', () => {
+    tabLines = []
     search = document.getElementById('searchInput').value
     callJson()
 })
 
 function loadTab(heroes) {
-    let lines = document.getElementsByClassName('line')
-    for (let line of Array.from(lines)) {
-        line.remove()
-    }
+    deleteLines()
 
     for (let i in heroes) {
         let hero = heroes[i]
@@ -58,10 +58,52 @@ function makeLine(hero) {
         tr.appendChild(td)
     }
 
-    tab.appendChild(tr)
+    tabLines.push(tr)
+    tab.appendChild(tr)   
+    
 }
 
 document.getElementById('searchSelect').addEventListener('change', () => {
+    tabLines = []
     searchSelect = document.getElementById('searchSelect').value
     callJson()
 })
+
+document.getElementById('id').addEventListener('click', () => { sort('id', 0) })
+document.getElementById('name').addEventListener('click', () => { sort('name', 1) })
+document.getElementById('fullName').addEventListener('click', () => { sort('fullName', 2) })
+
+function sort(category, nbr) {
+    deleteLines()
+    let numberValue = ['id', 'intelligence', 'strength', 'speed', 'durability', 'power', 'combat']
+    
+    document.getElementById(category).classList.toggle('notReverse')
+    if (document.getElementById(category).className == 'notReverse'){
+        tabLines.sort(function(a,b){
+            if (!numberValue.includes(category)) {
+                return a.getElementsByTagName('td')[nbr].innerHTML.localeCompare(b.getElementsByTagName('td')[nbr].innerHTML)
+            } else {
+                return a.getElementsByTagName('td')[nbr].innerHTML - b.getElementsByTagName('td')[nbr].innerHTML
+            }
+        })
+    } else {
+        tabLines.sort(function(a,b){
+            if (!numberValue.includes(category)) {
+                return b.getElementsByTagName('td')[nbr].innerHTML.localeCompare(a.getElementsByTagName('td')[nbr].innerHTML)
+            } else {
+                return b.getElementsByTagName('td')[nbr].innerHTML - a.getElementsByTagName('td')[nbr].innerHTML
+            }
+        })
+    }
+
+    for (let line of tabLines){
+        document.getElementById('elements').appendChild(line)
+    }
+}
+
+function deleteLines() {
+    let lines = document.getElementsByClassName('line')
+    for (let line of Array.from(lines)) {
+        line.remove()
+    }
+}

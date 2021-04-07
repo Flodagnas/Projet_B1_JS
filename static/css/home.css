@@ -34,3 +34,15 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 15px;
 }
+
+#id, #name, #fullName {
+    cursor: pointer;
+}
+
+#id:hover, #name:hover, #fullName:hover {
+    background-color: hsl(150, 75%, 55%);
+}
+
+#id:active, #name:active, #fullName:active {
+    outline: 1px hsl(150, 90%, 80%);
+}

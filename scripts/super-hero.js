@@ -9,6 +9,7 @@ const loadData = heroes => {
     let tab = document.getElementById('elements')
 
     for (let i in heroes) {
+        // Ligne
         let tr = document.createElement('tr')
 
         // Colonnes
@@ -31,7 +32,6 @@ const loadData = heroes => {
 
         tab.appendChild(tr)
     }
-
 }
 
 // Request the file fetch, it will download it in your browser cache
