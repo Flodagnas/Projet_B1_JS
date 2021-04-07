@@ -40,16 +40,41 @@ function makeLine(hero) {
     let tr = document.createElement('tr')
     tr.classList.add('line')
 
+    // // Colonnes
+    // let tdId = document.createElement('td')
+    // let tdName = document.createElement('td')
+    // let tdFullName = document.createElement('td')
+
+    // // Contenus
+    // tdId.appendChild(document.createTextNode(hero.id))
+    // tdName.appendChild(document.createTextNode(hero.name))
+    // tdFullName.appendChild(document.createTextNode(hero.biography.fullName))
+    // tr.appendChild(tdId); tr.appendChild(tdName); tr.appendChild(tdFullName)
+
     // Colonnes
-    let tdId = document.createElement('td')
+    let tdPhoto = document.createElement('td')
     let tdName = document.createElement('td')
     let tdFullName = document.createElement('td')
+    let tdRace = document.createElement('td')
+    let tdGender = document.createElement('td')
+    let tdHeight = document.createElement('td')
+    let tdWeight = document.createElement('td')
+    let tdPlaceOfBirth = document.createElement('td')
+    let tdAlignement = document.createElement('td')
 
     // Contenus
-    tdId.appendChild(document.createTextNode(hero.id))
+    let oImg = document.createElement("img")
+    oImg.setAttribute('src', hero.images.xs);
+    tdPhoto.appendChild(oImg)
     tdName.appendChild(document.createTextNode(hero.name))
     tdFullName.appendChild(document.createTextNode(hero.biography.fullName))
-    tr.appendChild(tdId); tr.appendChild(tdName); tr.appendChild(tdFullName)
+    tdRace.appendChild(document.createTextNode(hero.appearance.race))
+    tdGender.appendChild(document.createTextNode(hero.appearance.gender))
+    tdHeight.appendChild(document.createTextNode(hero.appearance.height))
+    tdWeight.appendChild(document.createTextNode(hero.appearance.weight))
+    tdPlaceOfBirth.appendChild(document.createTextNode(hero.biography.placeOfBirth))
+    tdAlignement.appendChild(document.createTextNode(hero.biography.alignment))
+    tr.appendChild(tdPhoto); tr.appendChild(tdName); tr.appendChild(tdFullName)
 
     let powerStats = hero['powerstats']
     for (let i in powerStats) {
@@ -57,6 +82,7 @@ function makeLine(hero) {
         td.appendChild(document.createTextNode(powerStats[i]))
         tr.appendChild(td)
     }
+    tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight); tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
 
     tabLines.push(tr)
     tab.appendChild(tr)   
@@ -69,13 +95,19 @@ document.getElementById('searchSelect').addEventListener('change', () => {
     callJson()
 })
 
-document.getElementById('id').addEventListener('click', () => { sort('id', 0) })
 document.getElementById('name').addEventListener('click', () => { sort('name', 1) })
 document.getElementById('fullName').addEventListener('click', () => { sort('fullName', 2) })
+document.getElementById('race').addEventListener('click', () => { sort('race', 9) })
+document.getElementById('gender').addEventListener('click', () => { sort('gender', 10) })
+document.getElementById('height').addEventListener('click', () => { sort('height', 11) })
+document.getElementById('weight').addEventListener('click', () => { sort('weight', 12) })
+document.getElementById('placeOfBirth').addEventListener('click', () => { sort('placeOfBirth', 13) })
+document.getElementById('alignement').addEventListener('click', () => { sort('alignement', 14) })
 
 function sort(category, nbr) {
     deleteLines()
-    let numberValue = ['id', 'intelligence', 'strength', 'speed', 'durability', 'power', 'combat']
+    let numberValue = ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat']
+    let specialValue = ['height', 'weight']
     
     document.getElementById(category).classList.toggle('notReverse')
     if (document.getElementById(category).className == 'notReverse'){
@@ -95,6 +127,7 @@ function sort(category, nbr) {
             }
         })
     }
+
 
     for (let line of tabLines){
         document.getElementById('elements').appendChild(line)

@@ -35,11 +35,13 @@ h1 {
     margin-bottom: 15px;
 }
 
-#id, #name, #fullName {
+#id, #name, #fullName, #race, #gender, #height, #weight, #placeOfBirth, #alignement, #intelligence, #strength, #speed, #durability,
+#power, #combat {
     cursor: pointer;
 }
 
-#id:hover, #name:hover, #fullName:hover {
+#id:hover, #name:hover, #fullName:hover, #race:hover, #gender:hover, #height:hover, #weight:hover, #placeOfBirth:hover, #alignement:hover,
+#intelligence:hover, #strength:hover, #speed:hover, #durability:hover, #power:hover, #combat:hover {
     background-color: hsl(150, 75%, 55%);
 }
 
