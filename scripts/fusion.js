@@ -1,5 +1,9 @@
 console.log("Script search loaded")
 
+let linesInTab = []
+let pageNumero = 0
+let select = document.getElementById('nb-elem').value
+
 callJson()
 
 let search = ""
@@ -33,23 +37,18 @@ function callJson() {
     fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
     .then((response) => response.json()) // parse the response from JSON
     .then(loadTab) // .then will call the function with the JSON value
+    .then(() => {
+        document.querySelectorAll('.line').forEach(tr => {
+            linesInTab.push(tr)
+        })
+    })
+    .then(pagination)
 }
 
 function makeLine(hero) {
-    let tab = document.getElementById('elements')
+    let tbody = document.getElementById('elements')
     let tr = document.createElement('tr')
     tr.classList.add('line')
-
-    // // Colonnes
-    // let tdId = document.createElement('td')
-    // let tdName = document.createElement('td')
-    // let tdFullName = document.createElement('td')
-
-    // // Contenus
-    // tdId.appendChild(document.createTextNode(hero.id))
-    // tdName.appendChild(document.createTextNode(hero.name))
-    // tdFullName.appendChild(document.createTextNode(hero.biography.fullName))
-    // tr.appendChild(tdId); tr.appendChild(tdName); tr.appendChild(tdFullName)
 
     // Colonnes
     let tdPhoto = document.createElement('td')
@@ -85,7 +84,7 @@ function makeLine(hero) {
     tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight); tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
 
     tabLines.push(tr)
-    tab.appendChild(tr)   
+    tbody.appendChild(tr)   
     
 }
 
@@ -140,3 +139,48 @@ function deleteLines() {
         line.remove()
     }
 }
+
+
+function pagination() {
+    
+    let tbody = document.getElementById('elements')
+    let lines = document.querySelectorAll('.line')
+    lines.forEach(line => {
+        line.remove()
+    })
+    if (select === "") {
+        for (let i = 0; i < linesInTab.length; i++) {
+            tbody.appendChild(linesInTab[i])
+        }
+    } else {
+        let start = parseInt(pageNumero) * parseInt(select)
+        let end = parseInt(start) + parseInt(select) - 1
+        let tri = linesInTab.slice(start, end)
+        for (let line of tri) {
+            tbody.appendChild(line)
+        }  
+    }
+}
+
+document.getElementsByName('previous')[0].addEventListener('click', () => {
+    pageNumero -= 1
+    pagination()
+})
+document.getElementsByName('previous')[1].addEventListener('click', () => {
+    pageNumero -= 1
+    pagination()
+})
+document.getElementsByName('next')[0].addEventListener('click', () => {
+    pageNumero += 1
+    pagination()
+})
+document.getElementsByName('next')[1].addEventListener('click', () => {
+    pageNumero += 1
+    pagination()
+})
+
+document.getElementById('nb-elem').addEventListener('change', () => {
+    select = document.getElementById('nb-elem').value
+    console.log(select)
+    pagination()
+})
