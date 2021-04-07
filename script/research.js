@@ -7,7 +7,6 @@ let test = []
 let page = 0
 let select = document.getElementById('nb-elem').value
 
-console.log(test);
 const loadData = heroes => {
     let tab = document.getElementById('elements')
     
@@ -57,11 +56,11 @@ fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
     .then((response) => response.json()) // parse the response from JSON
     .then(loadData) // .then will call the function with the JSON value
 
-    
+
 Array.from(document.getElementsByClassName('line')).forEach(tr => {
+    console.log(tr)
     test.push(tr)
 });
-console.log(test);
 
 
 function separation() {
@@ -116,3 +115,5 @@ document.getElementById('nb-elem').addEventListener('change', () => {
     
 })
 
+// console.log(document.getElementsByClassName('line'))
+// console.log(Array.from(document.getElementsByClassName('line')))
