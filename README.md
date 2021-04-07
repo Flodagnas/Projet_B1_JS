@@ -1,4 +1,4 @@
-<img src="https://www.dhresource.com/0x0/f2/albu/g5/M01/3F/B4/rBVaJFkgPkKAAXYHAALdbgBoZTk620.jpg" width="1000" height="240" name="Java Script">
+<img src="https://www.dhresource.com/0x0/f2/albu/g5/M01/3F/B4/rBVaJFkgPkKAAXYHAALdbgBoZTk620.jpg" width="1050" height="250" name="Java Script">
 
 # Projet_B1_JS : Super-Héros
 
