@@ -42,7 +42,8 @@ const loadData = heroes => {
             td.appendChild(document.createTextNode(powerStats[i]))
             tr.appendChild(td)
         }
-        tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight); tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
+        tr.appendChild(tdRace); tr.appendChild(tdGender); tr.appendChild(tdHeight);
+        tr.appendChild(tdWeight); tr.appendChild(tdPlaceOfBirth); tr.appendChild(tdAlignement)
 
         tbody.appendChild(tr)
     }
