@@ -1,5 +1,6 @@
 <img src="https://www.dhresource.com/0x0/f2/albu/g5/M01/3F/B4/rBVaJFkgPkKAAXYHAALdbgBoZTk620.jpg" width="1050" height="250" name="Java Script">
 
+
 # Projet_B1_JS : Super-Héros
 
 
@@ -15,14 +16,18 @@ Il doit être possible de filtrer l’information en recherchant le nom comme un
 La recherche devrait être interactive, en d’autres termes, les résultats devraient être affichés que vous écrivez.
 Les language utiliser son :
 
+
 <div style="display:flex;justify-content:space-between;background-color:#fff">
   <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" width="100" height="100" name="Java Script">
   <img src="https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_html5-512.png" width="100" height="100" name="HTML5">
   <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" width="100" height="100" name="CSS3">
 </div>
 
+
+<div style="background-color:#fff">
 - ## **Comment l’utiliser :**
 Notre site internet permet de trouver des super héros selon une base de données complète. Cette base de données est organisée par ordre alphabétique selon le nom des différents héros. Notre site permet également de trouver différentes informations sur les héros présent sur notre site. Lorsque vous effectué une recherche sur un héros vous trouverez ces informations le concernant : son nom ainsi que son nom de héros, sa photo, sa race, son genre, sa taille, son poids, son état de naissance, son intelligence, sa vitesse, ses pouvoirs et son rang sociale. Le site contient également une barre de recherche qui permet de trouver plus facilement un héros en particulier et les caractéristique le concernant. Nous avons également ajouté deux boutons permettant de passer d’une page à l’autre plus aisément. Vous pouvez également choisir le nombre de résultat que vous souhaité par page grâce à un encadré dédier à ceci. Ainsi, grâce à ce site vous pouvez trouver des renseignements sur n’importe quel héros et trouver des informations sur ses caractéristiques rapidement et facilement.
+</div>
 
 
 - ## **Comment le code est t-il organisé :**
@@ -31,7 +36,7 @@ Notre site internet permet de trouver des super héros selon une base de donnée
 - ## **L'organisation du groupe :**
 ```
 Nathan SCHNEIDER
-- 	Search
+- Search
 -	Sort
 -	Assemblage du code
 ```
