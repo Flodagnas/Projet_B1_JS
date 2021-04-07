@@ -29,6 +29,11 @@ Notre site internet permet de trouver des super héros selon une base de donnée
 
 
 - ## **Comment le code est t-il organisé :**
+```
+Dossier scirpt --> display.js / search.js / sort.js
+Dossier static --> home.css
+Dossier templates --> home.html
+```
 
 
 - ## **L'organisation du groupe :**
