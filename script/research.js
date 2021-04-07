@@ -13,6 +13,7 @@ const loadData = heroes => {
     
     for (let i in heroes) {
         let tr = document.createElement('tr')
+        tr.classList.add('line')
 
         // Colonnes
         let tdPhoto = document.createElement('td')
@@ -57,12 +58,13 @@ fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json')
     .then(loadData) // .then will call the function with the JSON value
 
     
-Array.from(document.getElementsByTagName('tr')).forEach(tr => {
+Array.from(document.getElementsByClassName('line')).forEach(tr => {
     test.push(tr)
 });
+console.log(test);
 
 
-function séparation() {
+function separation() {
     
     let tab = document.getElementById('elements')
     let lines = document.getElementsByTagName('tr')
@@ -78,12 +80,13 @@ function séparation() {
         let start = page * select
         let end = start + select - 1
         let tri = test.slice(start, end)
+        console.log(test);
         for (let i of tri) {
-            tab.appendChild(test[i])
-        }        
+            tab.appendChild(i)
+        }
+        console.log(start);
+        console.log(end);      
     }
-    console.log(start);
-    console.log(end);
 }
 
 document.getElementsByName('previous')[0].addEventListener('click', () => {
@@ -109,6 +112,7 @@ document.getElementsByName('next')[1].addEventListener('click', () => {
 document.getElementById('nb-elem').addEventListener('change', () => {
     select = document.getElementById('nb-elem').value
     console.log(select);
+    separation()
     
 })
 

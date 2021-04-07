@@ -7,14 +7,11 @@ div{
     
 }
 
-
-
 button{
     float: left;
     text-align: center;
     background-position: center;
 }
-
 
 input{
     text-align: center;
@@ -35,15 +32,15 @@ input{
     padding: 8px;
 }
 
-#tableau tr:nth-child(even){background-color: #f2f2f2;}
+#tableau tr:nth-child(even){background-color: #ffffff;}
 
-#tableau tr:hover {background-color: #ddd;}
+#tableau tr:hover {background-color: #cacaca;}
 
 #tableau th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: hsl(0, 100%, 61%);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    text-align: center;
+    background-color: hsl(147, 100%, 63%);
     color: white;
 }
 
