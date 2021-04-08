@@ -4,7 +4,7 @@
 # Projet_B1_JS : Super-Héros
 
 
-### Groupe [Nathan SCHNEIDER](https://github.com/NatSch45) / [Florian DAGNAS](https://github.com/Flodagnas) / [Malo LOYER VIAUD](https://github.com/Amol44)
+### Groupe : [Nathan SCHNEIDER](https://github.com/NatSch45) / [Florian DAGNAS](https://github.com/Flodagnas) / [Malo LOYER VIAUD](https://github.com/Amol44)
 
 
 - ## **Le projet en quelques phrases :**
@@ -24,8 +24,8 @@ Les language utiliser son :
 </span>
 
 
-- ## **Comment l’utiliser :**
-Notre site internet permet de trouver des super héros selon une base de données complète. Cette base de données est organisée par ordre alphabétique selon le nom des différents héros. Notre site permet également de trouver différentes informations sur les héros présent sur notre site. Lorsque vous effectué une recherche sur un héros vous trouverez ces informations le concernant : son nom ainsi que son nom de héros, sa photo, sa race, son genre, sa taille, son poids, son état de naissance, son intelligence, sa vitesse, ses pouvoirs et son rang sociale. Le site contient également une barre de recherche qui permet de trouver plus facilement un héros en particulier et les caractéristique le concernant. Nous avons également ajouté deux boutons permettant de passer d’une page à l’autre plus aisément. Vous pouvez également choisir le nombre de résultat que vous souhaité par page grâce à un encadré dédier à ceci. Ainsi, grâce à ce site vous pouvez trouver des renseignements sur n’importe quel héros et trouver des informations sur ses caractéristiques rapidement et facilement.
+- ## **Comment utiliser le site :**
+Notre site internet permet de trouver des super héros selon une base de données complète. Cette base de données est organisée par ordre alphabétique selon le nom des différents héros. Notre site permet également de trouver différentes informations sur les héros présent sur notre site. Lorsque vous effectuez une recherche sur un héros, vous trouverez ces informations le concernant : son nom ainsi que son nom de héros, sa photo, sa race, son genre, sa taille, son poids, son lieu de naissance, son intelligence, ses stats. Le site contient également une barre de recherche qui permet de trouver plus facilement un héros en particulier et les caractéristiques le concernant. Nous avons également ajouté deux boutons permettant de passer d’une page à l’autre plus aisément. Vous pouvez également choisir le nombre de résultat que vous souhaitez par page grâce à un encadré dédié à ceci. Ainsi, grâce à ce site vous pouvez trouver des renseignements sur n’importe quel héros et trouver des informations sur ses caractéristiques rapidement et facilement.
 
 
 - ## **Comment le code est t-il organisé :**
@@ -34,6 +34,7 @@ Dossier scirpt --> display.js / search.js / sort.js
 Dossier static --> home.css
 Dossier templates --> home.html
 ```
+Dans le dossier script nous aurons les les trois script developper par vos developpeur preferer, display qui sert a gerer la page et afficher tout les super-héros, le search qui permet gerer la recherche par le nom du hero, et sort qui permet de trier par categorie.
 
 
 - ## **L'organisation du groupe :**
