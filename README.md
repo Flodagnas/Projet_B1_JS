@@ -8,13 +8,13 @@
 
 
 - ## **Le projet en quelques phrases :**
-Il faut construire une page web afin d’organiser toutes les données des super-heros. Cette information peut être trouvée sur un site web.  
+Il faut construire une page web afin d’organiser toutes les données des héros. Cette information peut être trouvée sur un site web.  
 Pour extraire les informations de l’API, nous devons utiliser fetch dans JS. Lorsque nous utilisons fetch, il retourne toujours une promesse.  
 L’extraction des données depuis un serveur distant prend du temps, et loadData est exécuté lorsque le navigateur reçoit les données des héros, et le serveur peut prendre un certain temps.  
 Les informations doivent être affichées sur plusieurs pages.  
-Il doit être possible de filtrer l’information en recherchant le nom comme une chaîne (ex : superhéros qui contiennent 'man' dans leur nom).  
-La recherche devrait être interactive, en d’autres termes, les résultats devraient être affichés que vous écrivez.  
-Les language utiliser son :
+Il doit être possible de filtrer l’information en recherchant le nom comme une chaîne (ex : héros qui contiennent 'man' dans leur nom).  
+La recherche devront être interactive, en d’autres termes, les résultats devraient être affichés à chaque caractères que vous écrivez.  
+Les langages utilisé son :
 
 
 <span>
@@ -26,7 +26,7 @@ Les language utiliser son :
 
 - ## **Comment utiliser le site :**
 Pour lancez le projet, il faut ouvrir le fichier "HTML" avec "live serveur".  
-Notre site internet permet de trouver des super héros selon une base de données complète. Cette base de données est organisée par ordre alphabétique selon le nom des différents héros. Notre site permet également de trouver différentes informations sur les héros présent sur notre site. Lorsque vous effectuez une recherche sur un héros, vous trouverez ces informations le concernant : son nom ainsi que son nom de héros, sa photo, sa race, son genre, sa taille, son poids, son lieu de naissance, son intelligence, ses stats.  
+Notre site internet permet de trouver des héros selon une base de données complète. Cette base de données est organisée par ordre alphabétique selon le nom des différents héros. Notre site permet également de trouver différentes informations sur les héros présent sur notre site. Lorsque vous effectuez une recherche sur un héros, vous trouverez ces informations le concernant : son nom ainsi que son nom de héros, sa photo, sa race, son genre, sa taille, son poids, son lieu de naissance, son intelligence, ses stats.  
 Le site contient également une barre de recherche qui permet de trouver plus facilement un héros en particulier et les caractéristiques le concernant. Nous avons également ajouté deux boutons permettant de passer d’une page à l’autre plus aisément. Vous pouvez également choisir le nombre de résultat que vous souhaitez par page grâce à un encadré dédié à ceci. Ainsi, grâce à ce site vous pouvez trouver des renseignements sur n’importe quel héros et trouver des informations sur ses caractéristiques rapidement et facilement.
 
 
@@ -36,7 +36,7 @@ Dossier scirpt --> display.js / search.js / sort.js
 Dossier static --> home.css
 Dossier templates --> home.html
 ```
-Dans le dossier script nous aurons les les trois script developper par vos developpeur preferer, display qui sert a gerer la page et afficher tout les super-héros, le search qui permet gerer la recherche par le nom du hero, et sort qui permet de trier par categorie.
+Dans le dossier script nous aurons les les trois script developper par vos developpeur preferer, display qui sert a gerer la page et afficher tout les héros, le search qui permet gerer la recherche par le nom du héro, et sort qui permet de trier par categorie.
 
 
 - ## **L'organisation du groupe :**
@@ -60,4 +60,4 @@ Malo LOYER VIAUD
 ```
 
 
-- ##  **Liste de choses qui pourraient être améliorées et nos idées sur la façon de le faire :**
+- ##  **Liste des axes d'améliorations :**
