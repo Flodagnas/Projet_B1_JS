@@ -62,3 +62,7 @@ Dans le dossier script nous aurons les trois scripts développés par vos dével
 - ##  **Liste des axes d'améliorations :**
 
   - Afficher exhaustivement et sans erreur les icônes à chaque chargement de la page.
+
+  - Styliser plus profondément/soigneusement la page
+
+  - Finir le tri par poids, faisable sur le même principe que celui par taille
