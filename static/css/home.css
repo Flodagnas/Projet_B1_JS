@@ -48,3 +48,8 @@ h1 {
 #id:active, #name:active, #fullName:active {
     outline: 1px hsl(150, 90%, 80%);
 }
+
+#heroes {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

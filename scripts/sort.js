@@ -41,7 +41,7 @@ function sort(category, nbr) {
                     return heightAVal - heightBVal
 
                 } else {
-                    console.log(a.getElementsByTagName('td')[nbr].innerHTML)
+                    console.log()
                 }
 
             } else {
@@ -68,7 +68,7 @@ function sort(category, nbr) {
                     return heightBVal - heightAVal
 
                 } else {
-                    console.log("category : weight")
+                    console.log()
                 }
 
             } else {
@@ -78,6 +78,6 @@ function sort(category, nbr) {
     }
 
     pageNumero = 0
-    
+
     pagination()
 }
