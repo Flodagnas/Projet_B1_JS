@@ -25,7 +25,7 @@ Les language utiliser son :
 
 
 - ## **Comment utiliser le site :**
-Pour lancez le projet, il faut ouvrir le fichier "HTML" avec "live serveur".
+Pour lancez le projet, il faut ouvrir le fichier "HTML" avec "live serveur".  
 Notre site internet permet de trouver des super héros selon une base de données complète. Cette base de données est organisée par ordre alphabétique selon le nom des différents héros. Notre site permet également de trouver différentes informations sur les héros présent sur notre site. Lorsque vous effectuez une recherche sur un héros, vous trouverez ces informations le concernant : son nom ainsi que son nom de héros, sa photo, sa race, son genre, sa taille, son poids, son lieu de naissance, son intelligence, ses stats. Le site contient également une barre de recherche qui permet de trouver plus facilement un héros en particulier et les caractéristiques le concernant. Nous avons également ajouté deux boutons permettant de passer d’une page à l’autre plus aisément. Vous pouvez également choisir le nombre de résultat que vous souhaitez par page grâce à un encadré dédié à ceci. Ainsi, grâce à ce site vous pouvez trouver des renseignements sur n’importe quel héros et trouver des informations sur ses caractéristiques rapidement et facilement.
 
 
