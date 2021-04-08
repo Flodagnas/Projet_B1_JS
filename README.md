@@ -36,7 +36,7 @@ Dossier scirpt --> display.js / search.js / sort.js
 Dossier static --> home.css
 Dossier templates --> home.html
 ```
-Dans le dossier script nous aurons les les trois script developper par vos developpeur preferer, display qui sert a gerer la page et afficher tout les héros, le search qui permet gerer la recherche par le nom du héro, et sort qui permet de trier par categorie.
+Dans le dossier script nous aurons les trois scripts développés par vos développeurs préférés, "display" qui sert à gérer la page et afficher tous les héros, le "search" qui permet de gérer la recherche par le nom du héros, et "sort" qui permet de trier par catégorie. Ensuite le fichier "home.html" sert à afficher la page brute mais le "home.css" embellie et rend lisible la page des héros.
 
 
 - ## **L'organisation du groupe :**
@@ -61,3 +61,4 @@ Malo LOYER VIAUD
 
 
 - ##  **Liste des axes d'améliorations :**
+Faire en sortes que les icônes cette charge correctement chargement de la page.
